@@ -1,0 +1,16 @@
+
+
+#container{
+   display: flex;
+   flex-direction: column;
+   align-self: center;
+}
+.fila{
+   display: flex;
+   justify-content: center;
+}
+
+div>button{
+   width: 100px;
+   height: 100px;
+}

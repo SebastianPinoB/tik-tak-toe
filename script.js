@@ -27,7 +27,6 @@ function tablero(){
       tab[i] = Array(3).fill(0)
    }
    
-   //funciona
    const mostrarTablero = () => tab
 
    const mostrarTableroOrdenado = function(){
@@ -104,6 +103,8 @@ let controlador1 = controlador(tablero1.mostrarTablero())
 
 //jugar en loop
 /*for(let i = 0; i<3; i++){
+   //Aqui se ingresa las posiciones de la jugada
+   //y se pasan abajo
    if(i%2 == 0){
       controlador1.jugada(0, 0, "X")
    }else{
@@ -111,6 +112,7 @@ let controlador1 = controlador(tablero1.mostrarTablero())
    }
 }*/
 
+//Cuando el loop este listo esto se elimina
 controlador1.jugada(0,0, "X")
 controlador1.jugada(0,1, "O")
 controlador1.jugada(1,0, "X")
