@@ -93,13 +93,25 @@ function controlador(tablero){
 
 }
 
+function limpiarTablero(){
+      const botones = document.querySelectorAll(".btn")
+      botones.forEach(boton => {
+         boton.textContent = ""
+      })
+}
 
-const jugador1 = jugador("Seba")
-const jugador2 = jugador("Antonia")
+const botones = document.querySelectorAll(".btn")
+const btnReset = document.querySelector("#reset")
+btnReset.addEventListener("click", limpiarTablero)
 
-let tablero1 = tablero()
-console.log(tablero1.mostrarTableroOrdenado());
-let controlador1 = controlador(tablero1.mostrarTablero())
+botones.forEach(boton => {
+   boton.addEventListener("click", ()=>{
+      boton.textContent = "X"
+   })
+})
+
+
+
 
 //jugar en loop
 /*for(let i = 0; i<3; i++){
@@ -113,11 +125,8 @@ let controlador1 = controlador(tablero1.mostrarTablero())
 }*/
 
 //Cuando el loop este listo esto se elimina
-controlador1.jugada(0,0, "X")
-controlador1.jugada(0,1, "O")
-controlador1.jugada(1,0, "X")
-controlador1.jugada(2,0, "X")
 
+/*
 console.log(tablero1.mostrarTableroOrdenado());
 
 
@@ -125,3 +134,4 @@ controlador1.verificarGanador(jugador1)
 
 console.log(jugador1.getPuntuacion());
 console.log(jugador2.getPuntuacion());
+*/

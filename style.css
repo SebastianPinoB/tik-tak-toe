@@ -10,7 +10,7 @@
    justify-content: center;
 }
 
-div>button{
+div>button.btn{
    width: 100px;
    height: 100px;
 }
